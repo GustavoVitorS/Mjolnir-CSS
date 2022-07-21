@@ -1,0 +1,195 @@
+*
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	height: 100vh;
+	background-image: radial-gradient( #68a9df 10%, #687cd4 );
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mjolnir
+{
+	font-size: 2vmin;
+/* 	 font-size: 35px; */
+	height: 40em;
+	width: 40em;
+	position: relative;
+
+	background: 
+		
+		/* circles */
+		radial-gradient( circle .5em at 37% 40%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .4em at 34% 45%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .3em at 32% 41%, #515a5a 100%, transparent 110% ),
+		
+		radial-gradient( circle .4em at right 38% top 65%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .3em at right 34% top 62%, #515a5a 100%, transparent 110% ),
+		
+		radial-gradient( circle .5em at 22% 85%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .4em at 17% 80%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .3em at 23% 75%, #515a5a 100%, transparent 110% ),
+		
+		radial-gradient( circle .4em at right 22% top 90%, #515a5a 100%, transparent 110% ),
+		radial-gradient( circle .3em at right 25% top 87%, #515a5a 100%, transparent 110% ),
+		
+		/* handle-top shadow */
+		linear-gradient( -55deg, 
+			#8d9191 40%, 
+			#7f8181 60%, transparent 61%
+		) 51.9% 21.5% / 2em 1.4em,
+		
+		
+		/* handle top */
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 21.5% / 8.5% 1.4em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 21% / 10% 2em,
+		
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 25.2% / 3.7% .5em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 25% / 5% 1em,
+		
+		
+		/* handle-bottom shadow */
+		linear-gradient( 45deg, 
+			transparent 30%, 
+			#b5b8b8 30%, #b5b8b8 40%, 
+			#b5b8b8 60%, transparent 61%
+		) right 46.6% top 75% / 2em 1em,
+		
+		
+		/* handle bottom */
+		linear-gradient( -45deg, #515a5a 50%, transparent 52% ) left 46% top 75% / 1em 1em,
+		linear-gradient( 45deg, #515a5a 50%, transparent 52% ) right 46% top 75% / 1em 1em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 75% / 2.2em 1em,
+		
+		linear-gradient( -45deg, #515a5a 50%, transparent 52% ) left 45% top 75% / 2em 1.5em,
+		linear-gradient( 45deg, #515a5a 50%, transparent 52% ) right 45% top 75% / 2em 1.5em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 75% / 2em 1.5em,
+		
+		
+		/* handle dark lines */
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 30% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 35% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 40% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 45% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 50% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 55% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 60% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 65% / 7% .7em,
+		linear-gradient( 0deg, #515a5a, #515a5a ) 50% 70% / 7% .7em,
+		
+		/* handle */
+		linear-gradient( 90deg, 
+			#515a5a 0%, #515a5a 15%,
+			#f7c6c1 15%, #f7c6c1 32.5%,
+			#e94c3a 32.5%, #e94c3a 50%,
+			#e94c3a 50%, #e94c3a 85%,
+			#515a5a 85%, #515a5a 100%
+		) 50% 50% / 5% 52%;
+		
+	background-repeat: no-repeat;
+	transform: translate( -2em, -6em ) rotate( -15deg );
+	transform-origin: 50% 50%;
+}
+
+.mjolnir::before,
+.mjolnir::after
+{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+.mjolnir::before
+{	
+	width: 40%;
+	height: 25%;
+	left: 30%;
+	bottom: 0;
+	background: 
+		/* corners */
+		linear-gradient( -45deg, 
+			transparent 38%, #515a5a 38%, 
+			#515a5a 62%, transparent 62%
+		) left .1em top 0 / 1.5em 1.5em,
+		
+		linear-gradient( 45deg, 
+			transparent 38%, #515a5a 38%, 
+			#515a5a 62%, transparent 62%
+		) right .1em top 0 / 1.5em 1.5em,
+		
+		linear-gradient( 135deg, 
+			transparent 38%, #515a5a 38%, 
+			#515a5a 62%, transparent 62%
+		) right .2em bottom 0 / 1.5em 1.5em,
+		
+		linear-gradient( -135deg, 
+			transparent 38%, #515a5a 38%, 
+			#515a5a 62%, transparent 62%
+		) left .1em bottom 0 / 1.5em 1.5em,
+		
+		
+		/* vertical lines */
+		linear-gradient( 90deg, 
+			#515a5a 0%, #515a5a 2%, 
+			transparent 2%, transparent 8%, 
+			#515a5a 8%, #515a5a 10%, 
+			transparent 10%
+		),
+		
+		linear-gradient( -90deg, 
+			#515a5a 0%, #515a5a 2%, 
+			transparent 2%, transparent 8%, 
+			#515a5a 8%, #515a5a 10%, 
+			transparent 10%
+		),
+		
+		
+		/* horizontal lines */
+		linear-gradient( 180deg, 
+			#515a5a 0%, #515a5a 4%, 
+			transparent 4%, transparent 13%, 
+			#515a5a 13%, #515a5a 17%, 
+			transparent 10%
+		),
+		
+		linear-gradient( 0deg, 
+			#515a5a 0%, #515a5a 4%, 
+			transparent 4%, transparent 13%, 
+			#515a5a 13%, #515a5a 17%, 
+			transparent 10%
+		),
+		
+		
+		/* glow */
+		linear-gradient( -55deg, 
+			transparent 40%, rgba( 255,255,255,.3 ) 40%, 
+			rgba( 255,255,255,.3 ) 60%, transparent 60%
+		) 80% 45% / 70% 70%,
+		
+		linear-gradient( -55deg, 
+			transparent 45%, rgba( 255,255,255,.3 ) 45%, 
+			rgba( 255,255,255,.3 ) 55%, transparent 55%
+		) 10% 45% / 70% 70%,
+		
+		linear-gradient( 0deg, rgba( 255,255,255,.3 ), rgba( 255,255,255,.3 ) ) 37% 40% / 78% 65%;
+
+	background-repeat: no-repeat;
+	background-color: #bcbebe;
+	clip-path: polygon(
+		0 1.5em,
+		1.5em 0,
+		calc( 100% - 1.5em ) 0,
+		100% 1.5em,
+		100% calc( 100% - 1.5em ),
+		calc( 100% - 1.5em ) 100%,
+		1.5em 100%,
+		0 calc( 100% - 1.5em )
+	);
+}
