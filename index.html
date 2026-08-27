@@ -1,14 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mjolnir CSS 🔨 </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050a12" />
+  <meta name="description" content="A lightweight animated Mjölnir illustration inspired by Norse mythology and Viking Age hammer amulets." />
+  <title>Mjölnir — Storm Forged</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="mjolnir"></div>
-    <script src="script.js"></script>
-</body> 
+  <main class="storm-scene" id="storm-scene">
+    <div class="sky-glow" aria-hidden="true"></div>
+    <div class="clouds clouds-far" aria-hidden="true"></div>
+    <div class="clouds clouds-mid" aria-hidden="true"></div>
+    <div class="clouds clouds-near" aria-hidden="true"></div>
+    <div class="mist" aria-hidden="true"></div>
+    <div class="cloud-flash" id="cloud-flash" aria-hidden="true"></div>
+
+    <canvas id="lightning" class="lightning" aria-hidden="true"></canvas>
+
+    <section class="hero" aria-label="Animated Mjölnir illustration">
+      <div class="title-card">
+        <p class="eyebrow">STORM-FORGED RELIC</p>
+        <h1>MJÖLNIR</h1>
+        <p class="subtitle">A myth-inspired CSS 3D reconstruction</p>
+      </div>
+
+      <div class="hammer-stage" id="hammer-stage">
+        <div class="hammer-float">
+          <button class="hammer-hitbox" id="hammer-hitbox" type="button" aria-label="Summon lightning to Mjölnir">
+            <div class="hammer" id="hammer">
+              <div class="hammer-head" aria-hidden="true">
+                <div class="head-face head-front">
+                  <span class="forge-mark forge-mark-left"></span>
+                  <span class="forge-mark forge-mark-center"></span>
+                  <span class="forge-mark forge-mark-right"></span>
+                  <span class="knotwork knotwork-a"></span>
+                  <span class="knotwork knotwork-b"></span>
+                </div>
+                <div class="head-face head-back"></div>
+                <div class="head-face head-top"></div>
+                <div class="head-face head-bottom"></div>
+                <div class="head-face head-left"></div>
+                <div class="head-face head-right"></div>
+                <div class="head-bevel bevel-front"></div>
+                <div class="head-bevel bevel-back"></div>
+              </div>
+
+              <div class="neck" aria-hidden="true">
+                <div class="neck-face neck-front"></div>
+                <div class="neck-face neck-back"></div>
+                <div class="neck-face neck-left"></div>
+                <div class="neck-face neck-right"></div>
+              </div>
+
+              <div class="handle" aria-hidden="true">
+                <div class="handle-face handle-front">
+                  <span class="wrap wrap-1"></span>
+                  <span class="wrap wrap-2"></span>
+                  <span class="wrap wrap-3"></span>
+                  <span class="wrap wrap-4"></span>
+                  <span class="wrap wrap-5"></span>
+                  <span class="wrap wrap-6"></span>
+                  <span class="wrap wrap-7"></span>
+                </div>
+                <div class="handle-face handle-back"></div>
+                <div class="handle-face handle-left"></div>
+                <div class="handle-face handle-right"></div>
+                <div class="pommel">
+                  <div class="pommel-face pommel-front"></div>
+                  <div class="pommel-face pommel-back"></div>
+                  <div class="pommel-face pommel-left"></div>
+                  <div class="pommel-face pommel-right"></div>
+                  <div class="pommel-face pommel-bottom"></div>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="ground-shadow" aria-hidden="true"></div>
+      </div>
+
+      <p class="hint">Move the pointer • Click Mjölnir to call the storm</p>
+    </section>
+
+    <div class="vignette" aria-hidden="true"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
